@@ -1,4 +1,4 @@
 export const COLORS = {
-  INDICATOR_COLOR: "#FF000000",
-  LABEL_COLOR: "",
+  INDICATOR_COLOR: "#6060A0",
+  LABEL_COLOR: "#f54293",
 };
