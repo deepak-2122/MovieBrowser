@@ -8,39 +8,61 @@ import { containerStyle } from "../styles";
 const WelcomeImage = require("../../assets/img/welcome.jpg");
 
 const Welcome = () => {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   return (
     <>
       {isLoading === false ? (
         <ImageBackground
           imageStyle={{ opacity: 0.7 }}
           source={WelcomeImage}
-          style={[containerStyle.container, {}]}>
+          style={[containerStyle.container, { width: "100%", height: "100%" }]}
+        >
           <Text
             style={{
-              fontSize: 100,
+              fontSize: 70,
               fontWeight: "bold",
-              color: "black",
+              color: "B",
               fontFamily: "Inter-Black",
-              backgroundColor: "yellow",
+              backgroundColor: "#eab676",
               paddingHorizontal: 10,
-            }}>
-            NEWS
+              borderColor: "black",
+              borderWidth: 5,
+              fontStyle: "italic",
+            }}
+          >
+            MOVIE
           </Text>
-          <Text
+          <View
             style={{
-              fontSize: 45,
-              fontWeight: "bold",
-              color: "black",
-              fontFamily: "Inter-Black",
-              borderColor: "yellow",
-              borderWidth: 2,
-              padding: 12,
-            }}>
-            READER APP
-          </Text>
+              borderWidth: 5,
+              borderColor: "black",
+              width: 260,
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              borderRadius: 12,
+            }}
+          >
+            <Text
+              style={{
+                fontSize: 35,
+                fontWeight: "bold",
+                color: "black",
+                fontFamily: "Inter-Black",
+                borderColor: "black",
+                borderWidth: 5,
+                width: 240,
+                padding: 12,
+                borderRadius: 12,
+                margin: 4,
+                fontStyle: "italic",
+              }}
+            >
+              BROWSER
+            </Text>
+          </View>
 
-          <View style={{ marginTop: 200 }}>
+          <View style={{ marginTop: 300 }}>
             <CustomButton title={"Get Started"}></CustomButton>
           </View>
         </ImageBackground>
