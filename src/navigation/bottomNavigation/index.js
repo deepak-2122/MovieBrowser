@@ -1,29 +1,77 @@
-import { StyleSheet, Text, View } from "react-native";
-
-import Loader from "../../pages/Loader";
+import AnDesign from "react-native-vector-icons/AntDesign";
+import MaterialCommunityIcons from "react-native-vector-icons/MaterialCommunityIcons";
 import { NavigationContainer } from "@react-navigation/native";
-import React from "react";
-import Welcome from "../../pages/Welcome";
-import { createStackNavigator } from "@react-navigation/stack";
+import { createMaterialBottomTabNavigator } from "@react-navigation/material-bottom-tabs";
+import { useState } from "react";
+import Home from "../../pages/Home";
 
-const Navigation = () => {
-  const Stack = createStackNavigator();
+const Tab = createMaterialBottomTabNavigator();
 
+const BottomTabNavigation = () => {
+  const [tabBackground, setTabBackground] = useState("red");
+  const [textColor, setTextColor] = useState("black");
   return (
     <NavigationContainer>
-      <Stack.Navigator
-        screenOptions={{
-          headerShown: false,
+      <Tab.Navigator
+        activeColor="black"
+        inactiveColor="#3e2465"
+        barStyle={{
+          backgroundColor: tabBackground,
         }}
-        initialRouteName={"Welcome"}
       >
-        <Stack.Screen name="Welcome" component={Welcome} />
-        <Stack.Screen name="Loader" component={Loader} />
-      </Stack.Navigator>
+        <Tab.Screen
+          name="Feed"
+          component={Home}
+          listeners={{
+            tabPress() {
+              setTabBackground("red");
+            },
+          }}
+          options={{
+            tabBarLabel: "Home",
+            tabBarIcon: ({ color }) => (
+              <AnDesign name="home" color={color} size={26} />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Notifications"
+          component={Home}
+          listeners={{
+            tabPress() {
+              setTabBackground("pink");
+            },
+          }}
+          options={{
+            tabBarLabel: "Updates",
+            tabBarIcon: ({ color }) => (
+              <MaterialCommunityIcons
+                onPre
+                name="bell"
+                color={color}
+                size={26}
+              />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Profile"
+          component={Home}
+          listeners={{
+            tabPress() {
+              setTabBackground("green");
+            },
+          }}
+          options={{
+            tabBarLabel: "Profile",
+            tabBarIcon: ({ color }) => (
+              <MaterialCommunityIcons name="account" color={color} size={26} />
+            ),
+          }}
+        />
+      </Tab.Navigator>
     </NavigationContainer>
   );
 };
 
-export default Navigation;
-
-const styles = StyleSheet.create({});
+export default BottomTabNavigation;

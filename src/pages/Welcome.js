@@ -29,6 +29,7 @@ const Welcome = () => {
               borderWidth: 4,
               fontStyle: "italic",
               margin: 8,
+              borderRadius: 10,
             }}
           >
             MOVIE
@@ -57,6 +58,11 @@ const Welcome = () => {
                 borderRadius: 12,
                 margin: 4,
                 fontStyle: "italic",
+                backgroundColor: "Yellow",
+                borderRadius: 10,
+                justifyContent: "center",
+                paddingHorizontal: 10,
+                textAlign: "center",
               }}
             >
               BROWSER
