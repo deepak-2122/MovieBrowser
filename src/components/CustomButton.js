@@ -9,7 +9,7 @@ const CustomButton = ({ title }) => {
         style={{
           width: 300,
           height: 50,
-          backgroundColor: "yellow",
+          backgroundColor: "#eab676",
           justifyContent: "center",
           borderRadius: 20,
         }}
