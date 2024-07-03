@@ -34,43 +34,31 @@ const Welcome = () => {
           >
             MOVIE
           </Text>
-          <View
+
+          <Text
             style={{
-              borderWidth: 5,
+              fontSize: 35,
+              fontWeight: "bold",
+              color: "black",
+              fontFamily: "Inter-Black",
               borderColor: "black",
-              width: 260,
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
+              borderWidth: 5,
+              width: 240,
+              padding: 12,
               borderRadius: 12,
+              margin: 4,
+              fontStyle: "italic",
+              backgroundColor: "Yellow",
+              borderRadius: 10,
+              justifyContent: "center",
+              paddingHorizontal: 10,
+              textAlign: "center",
             }}
           >
-            <Text
-              style={{
-                fontSize: 35,
-                fontWeight: "bold",
-                color: "black",
-                fontFamily: "Inter-Black",
-                borderColor: "black",
-                borderWidth: 5,
-                width: 240,
-                padding: 12,
-                borderRadius: 12,
-                margin: 4,
-                fontStyle: "italic",
-                backgroundColor: "Yellow",
-                borderRadius: 10,
-                justifyContent: "center",
-                paddingHorizontal: 10,
-                textAlign: "center",
-              }}
-            >
-              BROWSER
-            </Text>
-          </View>
-
-          <View style={{ marginTop: 200 }}>
-            <CustomButton title={"Get Started"}></CustomButton>
+            BROWSER
+          </Text>
+          <View style={{ marginTop: 400 }}>
+            <CustomButton title={"Let's explore the app"}></CustomButton>
           </View>
         </ImageBackground>
       ) : (

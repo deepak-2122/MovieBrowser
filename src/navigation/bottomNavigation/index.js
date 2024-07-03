@@ -8,7 +8,7 @@ import Home from "../../pages/Home";
 const Tab = createMaterialBottomTabNavigator();
 
 const BottomTabNavigation = () => {
-  const [tabBackground, setTabBackground] = useState("red");
+  const [tabBackground, setTabBackground] = useState("cyan");
   const [textColor, setTextColor] = useState("black");
   return (
     <NavigationContainer>
@@ -24,18 +24,18 @@ const BottomTabNavigation = () => {
           component={Home}
           listeners={{
             tabPress() {
-              setTabBackground("red");
+              setTabBackground("lightblue");
             },
           }}
           options={{
             tabBarLabel: "Home",
             tabBarIcon: ({ color }) => (
-              <AnDesign name="home" color={color} size={26} />
+              <AnDesign name="home" color={color} size={30} />
             ),
           }}
         />
         <Tab.Screen
-          name="Notifications"
+          name="New"
           component={Home}
           listeners={{
             tabPress() {
@@ -43,29 +43,24 @@ const BottomTabNavigation = () => {
             },
           }}
           options={{
-            tabBarLabel: "Updates",
+            tabBarLabel: "New",
             tabBarIcon: ({ color }) => (
-              <MaterialCommunityIcons
-                onPre
-                name="bell"
-                color={color}
-                size={26}
-              />
+              <MaterialCommunityIcons name="new-box" color={color} size={30} />
             ),
           }}
         />
         <Tab.Screen
-          name="Profile"
+          name="Search"
           component={Home}
           listeners={{
             tabPress() {
-              setTabBackground("green");
+              setTabBackground("lightgreen");
             },
           }}
           options={{
-            tabBarLabel: "Profile",
+            tabBarLabel: "Search",
             tabBarIcon: ({ color }) => (
-              <MaterialCommunityIcons name="account" color={color} size={26} />
+              <MaterialCommunityIcons name="magnify" color={color} size={30} />
             ),
           }}
         />
