@@ -23,7 +23,7 @@ const Welcome = () => {
               fontWeight: "bold",
               color: "black",
               fontFamily: "Inter-Black",
-              backgroundColor: "#eab676",
+              backgroundColor: "#082240",
               paddingHorizontal: 10,
               borderColor: "BLlack",
               borderWidth: 4,
