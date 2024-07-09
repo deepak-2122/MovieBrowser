@@ -18,9 +18,10 @@ const BottomTabNavigation = () => {
       inactiveColor="#3e2465"
       barStyle={{
         backgroundColor: tabBackground,
-      }}>
+      }}
+    >
       <Tab.Screen
-        name="Feed"
+        name="feed"
         component={Home}
         listeners={{
           tabPress() {
@@ -58,7 +59,7 @@ const BottomTabNavigation = () => {
           },
         }}
         options={{
-          tabBarLabel: "Search",
+          tabBarLabel: "Profile",
           tabBarIcon: ({ color }) => (
             <MaterialCommunityIcons name="account" color={color} size={30} />
           ),

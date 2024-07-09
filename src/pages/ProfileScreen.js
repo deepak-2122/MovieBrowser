@@ -1,6 +1,6 @@
 import * as ImagePicker from "expo-image-picker";
 
-import { Appbar, Avatar, Button } from "react-native-paper";
+import { Appbar, Avatar, Button, Icon } from "react-native-paper";
 import {
   Linking,
   SafeAreaView,
@@ -62,7 +62,12 @@ const Profile = ({ navigation }) => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Appbar.Header>
+      <Appbar.Header
+        style={{
+          backgroundColor: "lightgreen",
+          elevation: 10,
+        }}
+      >
         <Appbar.Content title="About" />
       </Appbar.Header>
       <View style={styles.profileContainer}>
@@ -74,7 +79,7 @@ const Profile = ({ navigation }) => {
           )}
         </TouchableOpacity>
         <Button mode="contained" onPress={pickImage} style={styles.button}>
-          Change Profile Picture
+          <Text style={{ color: "black" }}> Profile Picture </Text>
         </Button>
         <View style={{ marginTop: 20, flexDirection: "row" }}>
           <Text>App Version :</Text>
@@ -109,5 +114,6 @@ const styles = StyleSheet.create({
   },
   button: {
     marginTop: 20,
+    backgroundColor: "lightgreen",
   },
 });

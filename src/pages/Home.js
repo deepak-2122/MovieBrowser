@@ -83,9 +83,10 @@ const HomeScreen = () => {
     <View style={styles.container}>
       <Appbar.Header
         style={{
-          backgroundColor: COLORS.WHITE,
+          backgroundColor: "lightblue",
           elevation: 10,
-        }}>
+        }}
+      >
         <Appbar.Content titleStyle={{ color: "black" }} title="Latest Movies" />
       </Appbar.Header>
       <FlatList

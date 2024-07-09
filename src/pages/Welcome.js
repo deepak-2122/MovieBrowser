@@ -15,20 +15,22 @@ const Welcome = ({ navigation }) => {
         <ImageBackground
           imageStyle={{ opacity: 0.7 }}
           source={WelcomeImage}
-          style={[containerStyle.container, { width: "100%", height: "100%" }]}>
+          style={[containerStyle.container, { width: "100%", height: "100%" }]}
+        >
           <Text
             style={{
-              fontSize: 70,
+              fontSize: 60,
               fontWeight: "bold",
               color: "black",
-              backgroundColor: "#082240",
+              backgroundColor: "#eab676",
               paddingHorizontal: 10,
               borderColor: "BLlack",
               borderWidth: 4,
               fontStyle: "italic",
               margin: 8,
               borderRadius: 10,
-            }}>
+            }}
+          >
             MOVIE
           </Text>
 
@@ -40,7 +42,7 @@ const Welcome = ({ navigation }) => {
               borderColor: "black",
               borderWidth: 5,
               width: 240,
-              padding: 12,
+              padding: 8,
               borderRadius: 12,
               margin: 4,
               fontStyle: "italic",
@@ -49,13 +51,15 @@ const Welcome = ({ navigation }) => {
               justifyContent: "center",
               paddingHorizontal: 10,
               textAlign: "center",
-            }}>
+            }}
+          >
             BROWSER
           </Text>
           <View style={{ marginTop: 400 }}>
             <CustomButton
               navigation={navigation}
-              title={"Let's explore the app"}></CustomButton>
+              title={"Let's explore the app"}
+            ></CustomButton>
           </View>
         </ImageBackground>
       ) : (

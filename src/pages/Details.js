@@ -73,9 +73,10 @@ const Details = () => {
     <View style={styles.container}>
       <Appbar.Header
         style={{
-          backgroundColor: COLORS.WHITE,
+          backgroundColor: "pink",
           elevation: 10,
-        }}>
+        }}
+      >
         <Appbar.Content
           titleStyle={{ color: "black" }}
           title="Search Movie Trailer"
@@ -100,7 +101,8 @@ const Details = () => {
               borderRadius: 20,
               width: 320,
               marginTop: 100,
-            }}>
+            }}
+          >
             <Text style={{ textAlign: "center" }}>
               Please add a title that you want to search in the search box.
               Thanks!
