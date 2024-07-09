@@ -1,7 +1,9 @@
 import { StyleSheet, Text, View } from "react-native";
 
+import BottomTabNavigation from "../bottomNavigation";
 import { NavigationContainer } from "@react-navigation/native";
 import React from "react";
+import VideoPlayerScreen from "../../pages/VideoPlayerScreen";
 import Welcome from "../../pages/Welcome";
 import { createStackNavigator } from "@react-navigation/stack";
 
@@ -16,6 +18,8 @@ const Navigation = () => {
         }}
         initialRouteName={"Welcome"}>
         <Stack.Screen name="Welcome" component={Welcome} />
+        <Stack.Screen name="BottomTab" component={BottomTabNavigation} />
+        <Stack.Screen name="player" component={VideoPlayerScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

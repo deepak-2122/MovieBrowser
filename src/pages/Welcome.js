@@ -7,7 +7,7 @@ import { containerStyle } from "../styles";
 
 const WelcomeImage = require("../../assets/img/welcome.jpg");
 
-const Welcome = () => {
+const Welcome = ({ navigation }) => {
   const [isLoading, setIsLoading] = useState(false);
   return (
     <>
@@ -15,14 +15,12 @@ const Welcome = () => {
         <ImageBackground
           imageStyle={{ opacity: 0.7 }}
           source={WelcomeImage}
-          style={[containerStyle.container, { width: "100%", height: "100%" }]}
-        >
+          style={[containerStyle.container, { width: "100%", height: "100%" }]}>
           <Text
             style={{
               fontSize: 70,
               fontWeight: "bold",
               color: "black",
-              fontFamily: "Inter-Black",
               backgroundColor: "#082240",
               paddingHorizontal: 10,
               borderColor: "BLlack",
@@ -30,8 +28,7 @@ const Welcome = () => {
               fontStyle: "italic",
               margin: 8,
               borderRadius: 10,
-            }}
-          >
+            }}>
             MOVIE
           </Text>
 
@@ -40,7 +37,6 @@ const Welcome = () => {
               fontSize: 35,
               fontWeight: "bold",
               color: "black",
-              fontFamily: "Inter-Black",
               borderColor: "black",
               borderWidth: 5,
               width: 240,
@@ -53,12 +49,13 @@ const Welcome = () => {
               justifyContent: "center",
               paddingHorizontal: 10,
               textAlign: "center",
-            }}
-          >
+            }}>
             BROWSER
           </Text>
           <View style={{ marginTop: 400 }}>
-            <CustomButton title={"Let's explore the app"}></CustomButton>
+            <CustomButton
+              navigation={navigation}
+              title={"Let's explore the app"}></CustomButton>
           </View>
         </ImageBackground>
       ) : (
