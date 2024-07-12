@@ -25,7 +25,7 @@ const Welcome = ({ navigation }) => {
               backgroundColor: "#eab676",
               paddingHorizontal: 10,
               borderColor: "BLlack",
-              borderWidth: 4,
+              // borderWidth: 4,
               fontStyle: "italic",
               margin: 8,
               borderRadius: 10,
@@ -40,7 +40,7 @@ const Welcome = ({ navigation }) => {
               fontWeight: "bold",
               color: "black",
               borderColor: "black",
-              borderWidth: 5,
+              // borderWidth: 5,
               width: 240,
               padding: 8,
               borderRadius: 12,
@@ -51,6 +51,7 @@ const Welcome = ({ navigation }) => {
               justifyContent: "center",
               paddingHorizontal: 10,
               textAlign: "center",
+              backgroundColor: "#eab676",
             }}
           >
             BROWSER
