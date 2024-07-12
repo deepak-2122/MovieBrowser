@@ -1,12 +1,13 @@
-import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
+import Navigation from "./src/navigation/stackNavigation/index";
+import BottomTabNavigation from "./src/navigation/bottomNavigation/index";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Hello Team Movies Browser APP</Text>
-      <StatusBar style="auto" />
-    </View>
+    <>
+      <Navigation />
+      {/* <BottomTabNavigation /> */}
+    </>
   );
 }
 
