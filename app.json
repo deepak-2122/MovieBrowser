@@ -18,10 +18,16 @@
       "adaptiveIcon": {
         "foregroundImage": "",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.deepakbhatia.MovieBrowser"
     },
     "web": {
       "favicon": ""
+    },
+    "extra": {
+      "eas": {
+        "projectId": "1b30a1ab-ad9f-45d3-9495-2174ff665fae"
+      }
     }
   }
 }
